@@ -1,23 +1,31 @@
 MDFloatLayout:
 
+    MDTopAppBar:
+        id: toolbar
+        title: "MDTopAppBar"
+        pos_hint: {"top": 1}
+
 	MDRaisedButton:
-		text: "Open Time Picker"
+		text: "Выбрать время"
 		pos_hint: {'center_x': .5, 'center_y': .5}
 		on_release: app.show_time_picker()
+		md_bg_color: toolbar.md_bg_color
 	MDLabel:
 		id: time_label
-		text: "Выбирете время!"
+		text: "Выбирите время!"
 		pos_hint: {'center_x': .95, 'center_y': .4}
 
 	MDRaisedButton:
-		text: "Open Date Picker"
+		text: "Выбрать дату"
 		pos_hint: {'center_x': .5, 'center_y': .3}
 		on_release: app.show_date_picker()
+		md_bg_color: toolbar.md_bg_color
 	MDLabel:
 		id: date_label
 		text: "Выберите дату!"
 		pos_hint: {'center_x': .95, 'center_y': .2}
 	MDRaisedButton:
-		text: "Open Theme Picker"
+		text: "Выбрать цвет"
 		pos_hint: {'center_x': .5, 'center_y': .7}
-		on_release: app.show_theme_picker()
+		md_bg_color: toolbar.md_bg_color
+        on_release: app.open_color_picker()
