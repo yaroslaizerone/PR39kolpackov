@@ -15,11 +15,9 @@ class MainApp(MDApp):
         self.theme_cls.primary_palette = "BlueGray"
         return Builder.load_file('time.kv')
 
-    # Get Time
     def get_time(self, instance, time):
         self.root.ids.time_label.text = str(time)
 
-    # Cancel
     def on_cancel(self, instance, time):
         self.root.ids.time_label.text = "You Clicked Cancel!"
 
